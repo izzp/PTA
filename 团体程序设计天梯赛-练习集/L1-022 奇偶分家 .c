@@ -1,22 +1,14 @@
-#include <stdio.h>
+#include "stdio.h"
 int main()
 {
-	int N,i,a[1000];
-	int odd=0,even=0;//odd:ÆæÊý  even:Å¼Êý 
+	int N,i,a[1001],j=0,o=0;
 	scanf("%d",&N);
 	for(i=0;i<N;i++)
-		scanf("%d",&a[i]);
-	for(i=0;i<N;i++)
 	{
+		scanf("%d",&a[i]);
 		if(a[i]%2==0)
-		{
-			even++;
-		}
-		else
-		{
-			odd++;
-		}
+			o++;
+		else j++;
 	}
-	printf("%d %d",odd,even);
-	return 0;
+	printf("%d %d",j,o);
 }
